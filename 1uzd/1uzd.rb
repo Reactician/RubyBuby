@@ -1,9 +1,9 @@
-num = []
+masyvas= []
 
-while num.length < 3
-  puts "iveskite #{num.length+1}-aji skaiciu"
+while masyvas.length < 3
+  puts "iveskite #{masyvas.length+1}-aji skaiciu"
   i = gets.chomp
 
-  num << i
+  masyvas << i
 end
-puts "maziausias skaicius yra: " + num.min
+puts 'maziausias skaicius yra:'  + masyvas.min
