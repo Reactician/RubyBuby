@@ -24,7 +24,7 @@ if a + b > c && a + c > b && b + c > a
   end
   p = (a + b + c) / 2
   s = (p * (p - a) * (p - b) * (p - c))
-  puts ' - Plotas yra #{Math.sqrt(s).round(1)}'
+  puts "- Plotas yra #{Math.sqrt(s).round(1)}"
 else
   puts 'Toks trikampis neegzistuoja'
 end
