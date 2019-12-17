@@ -1,0 +1,19 @@
+
+<h1>Cows</h1>
+<table class="table table-borderless table-hover">
+<tr>
+	<td>Name</td>
+	<td>Weight</td>
+	<td>Age</td>
+	<td>More information</td>
+</tr>
+<% @cows.each do |cow| %>
+    	<tr>
+     	 <td><%= cow.name %></td>
+      	<td><%= cow.weight %></td>
+      	<td><%= cow.age %></td>
+      	<td><%= link_to "More...", cow_path(cow), :class => 'btn btn-success' %></td>
+    	</tr>
+
+	<% end %>
+		</table>

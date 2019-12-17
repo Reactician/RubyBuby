@@ -1,0 +1,12 @@
+
+<div class="well">
+<h2><strong><%= @cow.name %></strong></h2>
+<h4>Description:</h4>
+<p><%= @cow.description %></p>
+<h4>Weight:</h4>
+<p><%= @cow.weight %></p>
+<h4>Age:</h4>
+<p><%= @cow.age %></p>
+<%= link_to "Edit", edit_cow_path(@cow), :class => "btn btn-default" %>
+<%= link_to "Delete", cow_path(@cow), method: :delete, data:{confirm: 'Once its gone its gone bro. You sure?'}, :class => "btn btn-danger"%>
+</div>

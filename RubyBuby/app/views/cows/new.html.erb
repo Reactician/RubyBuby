@@ -1,0 +1,28 @@
+<h1>Add Cow</h1>
+<%= form_for :cow, url: cows_path do |f| %>
+		<% if @cow.errors.any? %>
+			<% @cow.errors.full_messages.each do |msg| %>
+			<div class="alert alert-danger"><%= msg %></div>
+			<% end %>
+		<% end %>
+			<p>
+			<%= f.label :name %></br>
+			<%= f.text_field(:name,{:class=> 'form-control'}) %>
+			</p>
+			<p>
+			<%= f.label :description %></br>
+			<%= f.text_area(:description,{:class=> 'form-control'}) %>
+			</p>
+			<p>
+			<%= f.label :weight%></br>
+			<%= f.number_field(:weight, step: :any, :class=> 'form-control') %>
+			</p>
+			<p>
+			<%= f.label :age %></br>
+			<%= f.number_field(:age,{:class=> 'form-control'}) %>
+			</p>
+			<p>
+				<%= f.submit({:class => 'btn btn-primary'}) %>
+			</p>
+	
+	<% end %>

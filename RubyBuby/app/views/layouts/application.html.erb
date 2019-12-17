@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RubyBuby</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+<%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <%= link_to "Cows", home_path, {:class => 'navbar-brand'} %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Home", home_path, {:class => 'nav-link'} %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create", new_cow_path, {:class => 'nav-link'} %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "About", about_path, {:class => 'nav-link'} %>
+      </li>
+     
+    </ul>
+<form class="form-inline my-2 my-lg-0">
+
+ <%= form_tag(cows_path method: :get) do %>
+      <%= text_field_tag :name, params[:name], :class => 'form-control mr-sm-2' %>
+      <%= submit_tag 'Search', name: nil, :class => 'btn btn-outline-success my-2 my-sm-0' %>
+<% end %>
+</form>
+</nav>]
+</div>
+<div class="container" style="margin-top:40px;">
+    <%= yield %>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
